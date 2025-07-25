@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Enter the time in minutes for the alarm:"
+read minutes
+seconds=$((minutes * 60))
+sleep $seconds && notify-send "Alarm" "Time's up!" && while true; do 
+	open ~/Music/tone/Alarm\ clock\ sound.mp3
+	sleep 7
+done
